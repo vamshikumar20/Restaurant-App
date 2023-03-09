@@ -1,0 +1,152 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color:lightyellow;
+}
+.page{
+    display: flex;
+    flex-direction: row ;
+    height:1080px;
+}
+#tables{
+    padding-top:25px;
+    width:25%;
+    height:100%;
+    border-right: 2px solid black;
+}
+#menu{
+    padding-top: 25px;
+    width:75%;
+    height:100%;
+    border-left: 2px solid black;
+}
+
+
+.table_item{
+    padding:12px;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 1px solid black;
+   border-radius: 5px;
+    margin: 5px;
+    margin-bottom: 10px;
+}
+.table_item:hover{
+    cursor: pointer;
+  background-color: orange;
+  transition: 0.5s;
+}
+.menu_item{
+    padding:10px;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 1px solid black;
+    border-radius: 5px;
+    
+    margin: 5px;
+    margin-bottom: 10px;
+}
+.menu_item:hover{
+    cursor: pointer;
+    background-color: whitesmoke;
+}
+#tabh{
+    text-align: center;
+}
+#menh{
+    text-align: center;
+}
+.table_item h1{
+    color:rgb(36, 35, 35)
+}
+.menu_item h1{
+    color:rgb(36, 35, 35);
+    margin: 10px;
+}
+input{
+    padding:5px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+}
+
+#close:hover{
+    cursor:pointer;
+}
+.inputs{
+    padding:5px;
+    margin:5px;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+}
+
+.delete{
+    background: "delete.png";
+    max-width: 20px;
+    width: 100%;
+}
+.delete:hover{
+    cursor: pointer;
+}
+#table_detail{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 1920;
+    max-height: 1080;
+    background-color: rgba(0, 0, 0, 0.285);
+    width: 100%;
+    height: 100%;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    /* transform:tran slate(-50%,-50%); */
+}
+.detail{
+    display: flex;
+    /* text-align: center; */
+    flex-direction: column;
+    position: absolute;
+    max-width: 500px;
+    max-height: 500px;
+    height: 100%;
+    width: 100%;
+    /* top:50%;
+    left: 50%;
+    transform:translate(-50%,-50%); */
+    background-color: aliceblue;
+    align-items: center;
+    
+}
+
+table {
+    width: 100%;
+    border: 1px solid;
+    text-align: center;
+    background-color: lightsteelblue;
+  }
+  table, th, td {
+    padding: 0px;
+    margin:0px;
+    border: 1px solid black;
+  }
+  .buttonss{
+    background-color: white;
+    padding: 1px;
+    border: 1px solid;
+    margin: 1px;
+    cursor: pointer;
+  }
