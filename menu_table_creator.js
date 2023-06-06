@@ -1,8 +1,13 @@
 const createTableElements =  () => {
     // removeAllChildNodes(table_page);
     let count =1;
-    for(let i of table_array){
 
+    for(let i of table_array){
+        if(i=={items:{},total:0}){
+            alert("bill to pay 0");
+        }
+        else
+       {
         console.log(i,menu[i])
         let div = document.createElement("div");
         let p = document.createElement("p");
@@ -71,6 +76,7 @@ const createTableElements =  () => {
         table_page.appendChild(div);
         console.log(div.innerHTML)
         count++;
+     }
     }
 }
 
