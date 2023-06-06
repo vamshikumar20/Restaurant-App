@@ -43,7 +43,7 @@ const updateElements = (id,count,total) =>{
     p.innerHTML = count;
     span.innerHTML = `| Total price : ${total}`;
     p.appendChild(span);
-    console.log(ele,count,total);
+    // console.log(ele,count,total);
 
 }
 
