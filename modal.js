@@ -1,8 +1,10 @@
 const create_table_row = (e) => {
     table_detail.style.display = "flex";
-
+// var list_id=[]
 
     let id = e.currentTarget.id;
+//     list_id.push(id)
+    // alert(id)
     table_number.innerHTML = id;
     table_curr = table_array[id-1];
     removeAllChildNodes(table);
@@ -120,6 +122,9 @@ const create_table_row = (e) => {
             amount_row.appendChild(amount_col);
             amount_row.appendChild(amount_col2);
             table.appendChild(amount_row);
+            //
+            //get total price
+            localStorage.setItem(id,total_amount)
 
         }
     
@@ -138,3 +143,44 @@ modal_close.onclick = function(event){
     table_detail.style.display = "none";
     
 }
+
+let genbill=document.getElementById('generatebill');
+genbill.addEventListener('click',GenerateBill)
+
+function GenerateBill(){
+  // alert("hi")
+  
+  let modal=document.getElementById('generatebill');
+let table_name= modal.parentNode.childNodes[1].innerText.split("|")[0]
+// console.log(modal.parentNode.children[1])
+// console.log(modal.parentNode.innerHTML)
+//  modal.parentNode.removeChild(children[2]);
+ if(modal.parentNode.children[1].innerHTML!=""){ 
+  // console.log("finding id "+modal.parentNode.children[1].children[0].parentElement.id)
+  let toatl_price=modal.parentNode.children[1].lastElementChild.lastElementChild.innerHTML;
+  // console.log(modal.parentNode.children[1].lastElementChild.lastElementChild.innerHTML)
+  let id=modal.parentNode.children[1].children[0].parentElement.id
+  console.log(modal.parentNode.children[1].children[0].parentElement)
+  removeAllChildNodes(modal.parentNode.children[1].children[0].parentElement)
+  modal.parentNode.children[1].innerHTML="";
+  alert(`The bill is to be paid for ${table_name} is Rs.${toatl_price}`)
+  if(table_name=="Table 1"){
+    table_array[0]={items:{},total:0}
+  }
+  if(table_name=="Table 2"){
+    table_array[1]={items:{},total:0}
+  }
+  if(table_name=="Table 3"){
+    table_array[2]={items:{},total:0}
+  }
+  updateElements(id,0,0);
+
+  
+ }
+ else{
+
+  alert(`Total Cost For ${table_name} is 0, No need to pay bill`)
+ }
+ 
+  }
+
